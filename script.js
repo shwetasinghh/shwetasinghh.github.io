@@ -53,7 +53,6 @@
   const roles = [
     'Software Engineer',
     'Full-Stack Developer',
-    'Problem Solver',
     'Open Source Contributor',
   ];
   let ri = 0, ci = 0, deleting = false;
