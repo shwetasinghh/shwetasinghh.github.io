@@ -14,19 +14,33 @@
       gap: 1.25rem;
     }
     .skill-group {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: rgba(20, 24, 38, 0.8);
+      border: 1px solid rgba(124,107,255,0.15);
       border-radius: var(--radius);
       padding: 1.5rem;
-      transition: border-color var(--transition), transform var(--transition);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
     }
-    .skill-group:hover { border-color: var(--accent-1); transform: translateY(-2px); }
+    .skill-group:hover {
+      border-color: var(--accent-1);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 36px rgba(124,107,255,0.15);
+    }
+    /* Colorful left accent per card */
+    .skill-group:nth-child(1) { border-left: 3px solid var(--accent-1); }
+    .skill-group:nth-child(2) { border-left: 3px solid var(--accent-2); }
+    .skill-group:nth-child(3) { border-left: 3px solid var(--accent-4); }
+    .skill-group:nth-child(4) { border-left: 3px solid var(--accent-3); }
+    .skill-group:nth-child(5) { border-left: 3px solid var(--accent-1); }
+    .skill-group:nth-child(6) { border-left: 3px solid var(--accent-2); }
     .skill-group-title {
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--accent-1);
+      background: var(--grad-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -34,12 +48,18 @@
     }
     .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .tag {
-      background: rgba(88,166,255,0.08);
-      border: 1px solid rgba(88,166,255,0.22);
-      color: var(--text);
+      background: rgba(124,107,255,0.1);
+      border: 1px solid rgba(124,107,255,0.28);
+      color: #c4beff;
       font-size: 0.82rem;
-      padding: 0.25rem 0.7rem;
+      padding: 0.25rem 0.75rem;
       border-radius: 20px;
+      font-weight: 500;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .tag:hover {
+      background: rgba(124,107,255,0.2);
+      border-color: rgba(124,107,255,0.5);
     }
   </style>
 </head>
