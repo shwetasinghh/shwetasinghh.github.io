@@ -4,62 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience — Shweta Singh</title>
+  <meta name="description"
+    content="Shweta Singh's professional experience as Senior Software Engineer on the Hardware Team at Ridecell India — vehicle hardware integration, backend microservices, and production operations." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
-  <style>
-    .exp-card {
-      background: rgba(20, 24, 38, 0.8);
-      border: 1px solid rgba(124,107,255,0.15);
-      border-left: 3px solid var(--accent-1);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      margin-bottom: 1.25rem;
-      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-    }
-    .exp-card:hover {
-      border-color: var(--accent-1);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 36px rgba(124,107,255,0.15);
-    }
-    .exp-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
-    .exp-role {
-      font-size: 1.05rem; font-weight: 800;
-      background: var(--grad-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .exp-company { color: var(--accent-2); font-weight: 700; font-size: 0.9rem; }
-    .exp-period {
-      font-size: 0.78rem;
-      background: rgba(255,201,71,0.12);
-      border: 1px solid rgba(255,201,71,0.3);
-      color: var(--accent-4);
-      padding: 0.15rem 0.6rem;
-      border-radius: 12px;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-    .exp-desc { color: var(--muted); font-size: 0.9rem; margin-top: 0.75rem; }
-    .exp-desc ul { padding-left: 1.2rem; margin-top: 0.5rem; }
-    .exp-desc li { margin-bottom: 0.35rem; }
-    .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
-    .exp-tag {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.65rem;
-      border-radius: 16px;
-      background: rgba(124,107,255,0.1);
-      border: 1px solid rgba(124,107,255,0.28);
-      color: #c4beff;
-      font-weight: 500;
-    }
-  </style>
 </head>
 <body>
 
-  <canvas id="particle-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.25;"></canvas>
+  <canvas id="particle-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.35;"></canvas>
 
+  <!-- ─── NAVIGATION ─── -->
   <nav>
     <div class="nav-container">
       <a href="index.html" class="nav-logo">&lt;SS /&gt;</a>
@@ -71,7 +26,9 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html" class="nav-cta">Contact</a></li>
       </ul>
-      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </nav>
   <div class="mobile-nav" id="mobile-nav">
@@ -83,51 +40,125 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <div class="page-hero reveal">
-    <span class="section-label" style="display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-1);margin-bottom:0.5rem;">Career</span>
-    <h1>Experience</h1>
-    <p style="white-space:nowrap;">My professional journey — roles, responsibilities, and the impact I've made.</p>
-  </div>
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience" class="page-section">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+      <span class="section-line reveal"></span>
+      <p class="section-subtitle reveal" style="white-space:nowrap;">My professional journey — roles, responsibilities, and the impact I've made.</p>
 
-  <div class="container" style="padding-top: 1rem;">
+      <div class="timeline">
 
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <div>
-          <div class="exp-role">Senior Software Engineer — Hardware Team</div>
-          <div class="exp-company">Ridecell India Pvt. Ltd., Pune</div>
+        <!-- ── Role Header ── -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">&#128188;</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-title">Senior Software Engineer — Hardware Team</div>
+                <div class="timeline-company">Ridecell India Pvt. Ltd., Pune</div>
+              </div>
+              <span class="timeline-period">Feb 2020 – Present</span>
+            </div>
+            <p class="timeline-desc">
+              Part of the hardware team responsible for integrating vehicle hardware devices into
+              Ridecell's <strong>fleet management platform</strong> — spanning backend, mobile, and frontend
+              surfaces — ensuring features are production-ready and reliable at scale.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">Python</span>
+              <span class="exp-tag">Django</span>
+              <span class="exp-tag">REST APIs</span>
+              <span class="exp-tag">PostgreSQL</span>
+              <span class="exp-tag">Microservices</span>
+              <span class="exp-tag">React</span>
+              <span class="exp-tag">Mobile</span>
+              <span class="exp-tag">Hardware Integration</span>
+            </div>
+          </div>
         </div>
-        <div class="exp-period">Feb 2020 – Present</div>
-      </div>
-      <div class="exp-desc">
-        <p>
-          Part of the hardware team responsible for integrating vehicle hardware devices into
-          Ridecell's fleet management platform — spanning backend, mobile, and frontend surfaces —
-          ensuring features are production-ready and reliable at scale.
-        </p>
-        <ul>
-          <li>Lead end-to-end software integration of hardware devices into the platform, from API spec definition through to production delivery.</li>
-          <li>Write and review code across the stack; author automated functional and unit tests to maintain quality and reduce regression risk.</li>
-          <li>Own root cause analysis of production issues — create detailed reports, file bugs, and serve as the first escalation point for customer-facing problems.</li>
-          <li>Interface directly with Product Owners to finalise requirements and translate business needs into technical solutions.</li>
-          <li>Collaborate with engineering and support teams at third-party hardware vendors across geographies to drive successful software integrations.</li>
-          <li>Partner with the Principal Engineer to improve development guidelines, testing practices, and adopt a data-driven approach to engineering decisions.</li>
-        </ul>
-      </div>
-      <div class="exp-tags">
-        <span class="exp-tag">Python</span>
-        <span class="exp-tag">Django</span>
-        <span class="exp-tag">REST APIs</span>
-        <span class="exp-tag">PostgreSQL</span>
-        <span class="exp-tag">Microservices</span>
-        <span class="exp-tag">Hardware Integration</span>
-        <span class="exp-tag">Mobile</span>
-        <span class="exp-tag">React</span>
+
+        <!-- ── Hardware Integration & Platform Delivery ── -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">&#9881;&#65039;</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-title">Hardware Integration &amp; Platform Delivery</div>
+                <div class="timeline-company">Ridecell India Pvt. Ltd.</div>
+              </div>
+              <span class="timeline-period">Backend · Mobile · Frontend</span>
+            </div>
+            <ul class="achievement-list">
+              <li>Led <strong>end-to-end software integration</strong> of vehicle hardware devices into the platform — from API spec definition through backend implementation, mobile, and frontend surfaces, to production delivery.</li>
+              <li>Designed and built a <strong>self-hosted hardware backend microservice</strong> to replace a third-party integration, cutting significant recurring costs while giving the platform greater flexibility and control.</li>
+              <li>Hands-on with writing code, defining API specs, implementing new features, improving existing functionality, and <strong>reducing tech debt</strong> across the stack.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Technical Quality & Testing ── -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">&#129520;</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-title">Code Quality, Testing &amp; Engineering Standards</div>
+                <div class="timeline-company">Ridecell India Pvt. Ltd.</div>
+              </div>
+              <span class="timeline-period">SDLC &amp; Best Practices</span>
+            </div>
+            <ul class="achievement-list">
+              <li>Hands-on with <strong>code reviews and QA</strong> — writing automated functional and unit tests to maintain quality and reduce regression risk across releases.</li>
+              <li>Partnered with the Principal Engineer to adopt better <strong>development guidelines, practices, and principles</strong> to improve testing and the SDLC.</li>
+              <li>Collaborated with the Principal Engineer to drive a <strong>data-driven approach</strong> to engineering decisions across the team.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Production Operations & Reliability ── -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">&#128736;&#65039;</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-title">Production Operations &amp; Reliability</div>
+                <div class="timeline-company">Ridecell India Pvt. Ltd.</div>
+              </div>
+              <span class="timeline-period">Escalation &amp; RCA</span>
+            </div>
+            <ul class="achievement-list">
+              <li>Served as the <strong>first point of escalation</strong> from the team for production issues faced by customers — owning triage, communication, and resolution.</li>
+              <li>Led <strong>root cause analysis</strong> of complex production problems — creating detailed reports, filing bugs, and implementing fixes to prevent recurrence.</li>
+              <li>Maintained <strong>API latency and system reliability</strong> through continuous monitoring, profiling, and targeted optimisations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Cross-Team & Vendor Collaboration ── -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">&#129309;</div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-title">Cross-Team &amp; Vendor Collaboration</div>
+                <div class="timeline-company">Ridecell India Pvt. Ltd.</div>
+              </div>
+              <span class="timeline-period">Multi-Geography</span>
+            </div>
+            <ul class="achievement-list">
+              <li>Interfaced directly with <strong>Product Owners</strong> to finalise requirements and translate business needs into technical solutions.</li>
+              <li>Collaborated with engineering and support teams at <strong>third-party hardware vendors across geographies</strong> to drive successful software integrations.</li>
+              <li>Designed, developed, tested, and delivered new features in collaboration with leads from <strong>different teams across time zones</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-  </div>
-
+  <!-- ─── FOOTER ─── -->
   <footer>
     <p>Crafted with <span>&#9829;</span> by <strong>Shweta Singh</strong> &middot; Senior Software Engineer &middot; Pune, India</p>
     <p style="margin-top:0.4rem;font-size:0.78rem;">&#169; 2026 Shweta Singh. All rights reserved.</p>
