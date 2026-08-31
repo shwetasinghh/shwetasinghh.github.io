@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Shweta Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .proj-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .proj-card:hover {
+      border-color: var(--accent-1);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(88,166,255,0.08);
+    }
+    .proj-icon { font-size: 1.75rem; margin-bottom: 0.85rem; }
+    .proj-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.45rem; }
+    .proj-desc { font-size: 0.875rem; color: var(--muted); flex: 1; margin-bottom: 1.25rem; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .proj-tag {
+      font-size: 0.73rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: 16px;
+      background: rgba(63,185,80,0.1);
+      border: 1px solid rgba(63,185,80,0.25);
+      color: var(--accent-2);
+    }
+    .proj-links { display: flex; gap: 1rem; font-size: 0.83rem; }
+    .proj-links a { color: var(--accent-1); font-weight: 600; }
+    .proj-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <canvas id="particle-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.25;"></canvas>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">&lt;SS /&gt;</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-hero reveal">
+    <span class="section-label" style="display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-1);margin-bottom:0.5rem;">Portfolio</span>
+    <h1>Projects</h1>
+    <p>Things I've built — personal projects, side projects, and open-source work.</p>
+  </div>
+
+  <div class="container" style="padding-top: 1rem;">
+    <div class="projects-grid">
+
+      <!-- ── Replace with your real projects ── -->
+      <div class="proj-card reveal">
+        <div class="proj-icon">&#128202;</div>
+        <div class="proj-title">Project One</div>
+        <p class="proj-desc">
+          A concise description of what this project does, the problem it solves,
+          and any interesting technical decisions. 2-3 sentences is ideal.
+        </p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">FastAPI</span>
+          <span class="proj-tag">PostgreSQL</span>
+        </div>
+        <div class="proj-links">
+          <a href="#" target="_blank" rel="noopener">GitHub &rarr;</a>
+          <a href="#" target="_blank" rel="noopener">Live Demo &rarr;</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-icon">&#128640;</div>
+        <div class="proj-title">Project Two</div>
+        <p class="proj-desc">
+          Another project. Mention tech stack and impact — e.g. reduced load time
+          by 40%, used by 500+ users, automated a manual workflow, etc.
+        </p>
+        <div class="proj-tags">
+          <span class="proj-tag">React</span>
+          <span class="proj-tag">TypeScript</span>
+          <span class="proj-tag">Node.js</span>
+        </div>
+        <div class="proj-links">
+          <a href="#" target="_blank" rel="noopener">GitHub &rarr;</a>
+          <a href="#" target="_blank" rel="noopener">Live Demo &rarr;</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-icon">&#128736;&#65039;</div>
+        <div class="proj-title">Project Three</div>
+        <p class="proj-desc">
+          A CLI tool / API / library — describe what it does, why you built it,
+          and what you learned in the process.
+        </p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Docker</span>
+        </div>
+        <div class="proj-links">
+          <a href="#" target="_blank" rel="noopener">GitHub &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Crafted with <span>&#9829;</span> by <strong>Shweta Singh</strong></p>
+    <p style="margin-top:0.4rem;font-size:0.78rem;">&#169; 2025 Shweta Singh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

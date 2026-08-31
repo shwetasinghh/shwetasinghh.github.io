@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Shweta Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .exp-card:hover { border-color: var(--accent-1); transform: translateY(-2px); }
+    .exp-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+    .exp-role { font-size: 1.05rem; font-weight: 800; }
+    .exp-company { color: var(--accent-2); font-weight: 600; font-size: 0.9rem; }
+    .exp-period { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+    .exp-desc { color: var(--muted); font-size: 0.9rem; margin-top: 0.75rem; }
+    .exp-desc ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+    .exp-desc li { margin-bottom: 0.35rem; }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .exp-tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 16px;
+      background: rgba(88,166,255,0.1);
+      border: 1px solid rgba(88,166,255,0.25);
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="particle-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.25;"></canvas>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">&lt;SS /&gt;</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-hero reveal">
+    <span class="section-label" style="display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-1);margin-bottom:0.5rem;">Career</span>
+    <h1>Experience</h1>
+    <p>My professional journey — roles, responsibilities, and the impact I've made.</p>
+  </div>
+
+  <div class="container" style="padding-top: 1rem;">
+
+    <!-- ── Replace with your real experience ── -->
+    <div class="exp-card reveal">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">Software Engineer</div>
+          <div class="exp-company">Company Name</div>
+        </div>
+        <div class="exp-period">Jan 2024 – Present</div>
+      </div>
+      <div class="exp-desc">
+        <p>Brief overview of your role and team context.</p>
+        <ul>
+          <li>Key achievement or responsibility #1 — quantify where possible.</li>
+          <li>Key achievement or responsibility #2.</li>
+          <li>Key achievement or responsibility #3.</li>
+        </ul>
+      </div>
+      <div class="exp-tags">
+        <span class="exp-tag">Python</span>
+        <span class="exp-tag">React</span>
+        <span class="exp-tag">PostgreSQL</span>
+        <span class="exp-tag">Docker</span>
+      </div>
+    </div>
+
+    <div class="exp-card reveal">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">Software Engineer Intern</div>
+          <div class="exp-company">Another Company</div>
+        </div>
+        <div class="exp-period">Jun 2023 – Dec 2023</div>
+      </div>
+      <div class="exp-desc">
+        <p>Brief overview of internship focus.</p>
+        <ul>
+          <li>Built / contributed to X feature, used by Y users.</li>
+          <li>Improved Z by implementing …</li>
+        </ul>
+      </div>
+      <div class="exp-tags">
+        <span class="exp-tag">Node.js</span>
+        <span class="exp-tag">TypeScript</span>
+        <span class="exp-tag">REST APIs</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Crafted with <span>&#9829;</span> by <strong>Shweta Singh</strong></p>
+    <p style="margin-top:0.4rem;font-size:0.78rem;">&#169; 2025 Shweta Singh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

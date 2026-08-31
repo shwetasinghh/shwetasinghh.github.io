@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Shweta Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    .skills-section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .skill-group:hover { border-color: var(--accent-1); transform: translateY(-2px); }
+    .skill-group-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-1);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      background: rgba(88,166,255,0.08);
+      border: 1px solid rgba(88,166,255,0.22);
+      color: var(--text);
+      font-size: 0.82rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="particle-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.25;"></canvas>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">&lt;SS /&gt;</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-hero reveal">
+    <span class="section-label" style="display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-1);margin-bottom:0.5rem;">Toolkit</span>
+    <h1>Skills</h1>
+    <p>Technologies, tools, and concepts I work with regularly.</p>
+  </div>
+
+  <div class="container" style="padding-top: 1rem;">
+    <div class="skills-section-grid">
+
+      <div class="skill-group reveal">
+        <div class="skill-group-title">&#128187; Languages</div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Java</span>
+          <span class="tag">SQL</span>
+          <!-- Add / remove as needed -->
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-title">&#9881;&#65039; Frameworks &amp; Libraries</div>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Django</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-title">&#128202; Databases</div>
+        <div class="tags">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-title">&#9729;&#65039; Cloud &amp; DevOps</div>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Docker</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-title">&#128295; Tools</div>
+        <div class="tags">
+          <span class="tag">Git</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-title">&#128736;&#65039; Concepts</div>
+        <div class="tags">
+          <span class="tag">REST APIs</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">System Design</span>
+          <span class="tag">Agile / Scrum</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Crafted with <span>&#9829;</span> by <strong>Shweta Singh</strong></p>
+    <p style="margin-top:0.4rem;font-size:0.78rem;">&#169; 2025 Shweta Singh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
