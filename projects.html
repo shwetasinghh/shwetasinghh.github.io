@@ -8,6 +8,57 @@
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <style>
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .writing-card {
+      background: rgba(20, 24, 38, 0.8);
+      border: 1px solid rgba(255,201,71,0.15);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .writing-card:hover {
+      border-color: var(--accent-4);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(255,201,71,0.14);
+    }
+    .writing-card:nth-child(1) { border-top: 3px solid var(--accent-4); }
+    .writing-card:nth-child(2) { border-top: 3px solid var(--accent-3); }
+    .writing-card:nth-child(3) { border-top: 3px solid var(--accent-2); }
+    .writing-icon { font-size: 1.75rem; margin-bottom: 0.85rem; }
+    .writing-title {
+      font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.4;
+      background: var(--grad-warm);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+    .writing-desc { font-size: 0.875rem; color: var(--muted); flex: 1; margin-bottom: 1.25rem; }
+    .writing-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .writing-tag {
+      font-size: 0.73rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 16px;
+      background: rgba(255,201,71,0.1);
+      border: 1px solid rgba(255,201,71,0.3);
+      color: var(--accent-4);
+      font-weight: 600;
+    }
+    .writing-links { display: flex; gap: 1rem; font-size: 0.83rem; margin-top: auto; }
+    .writing-links a {
+      font-weight: 700;
+      background: var(--grad-warm);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .writing-links a:hover { text-decoration: underline; }
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -90,7 +141,7 @@
     <div class="container">
       <h2 class="section-title reveal">Projects</h2>
       <span class="section-line reveal"></span>
-      <p class="section-subtitle reveal" style="white-space:nowrap;">Key technical achievements, project contributions and open-source work</p>
+      <p class="section-subtitle reveal" style="white-space:nowrap;">Key technical achievements, open-source contributions, and technical writing</p>
 
     <!-- Open Source Contributions -->
     <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-1);margin-bottom:1rem;" class="reveal">
@@ -173,6 +224,58 @@
           <span class="proj-tag">End-to-End Testing</span>
           <span class="proj-tag">Fleet Management</span>
           <span class="proj-tag">Production Demo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Technical Writing -->
+    <h2 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-4);margin-top:3.5rem;margin-bottom:0.5rem;" class="reveal">
+      &#128221; Technical Writing
+    </h2>
+    <p style="font-size:0.875rem;color:var(--muted);margin-bottom:1.5rem;" class="reveal">
+      I write about practical backend engineering problems, with a focus on Python and Django — sharing solutions and lessons learned from real development challenges.
+    </p>
+    <div class="writing-grid" style="margin-bottom:1rem;">
+
+      <div class="writing-card reveal">
+        <div class="writing-icon">&#128200;</div>
+        <div class="writing-title">Flatten Nested Dictionary to a List or a Dictionary</div>
+        <p class="writing-desc">Practical Python techniques for transforming nested dictionaries into simpler, more workable structures.</p>
+        <div class="writing-tags">
+          <span class="writing-tag">Python</span>
+          <span class="writing-tag">Data Structures</span>
+        </div>
+        <div class="writing-links">
+          <a href="https://medium.com/@shweta17/flatten-nested-dictionary-to-a-list-or-a-dictionary-10a938d8285d" target="_blank" rel="noopener">Read on Medium &rarr;</a>
+        </div>
+      </div>
+
+      <div class="writing-card reveal">
+        <div class="writing-icon">&#128273;</div>
+        <div class="writing-title">How to Change the Primary Key of a Django Model from AutoField ID to One-to-One Foreign Key Column</div>
+        <p class="writing-desc">A practical guide to changing a Django model's primary key while handling the underlying database migration safely.</p>
+        <div class="writing-tags">
+          <span class="writing-tag">Django</span>
+          <span class="writing-tag">PostgreSQL</span>
+          <span class="writing-tag">Database Migrations</span>
+        </div>
+        <div class="writing-links">
+          <a href="https://medium.com/@shweta17/how-to-change-the-primary-key-of-a-django-model-from-auto-field-id-to-one-to-one-foreign-key-column-86de5fde610a" target="_blank" rel="noopener">Read on Medium &rarr;</a>
+        </div>
+      </div>
+
+      <div class="writing-card reveal">
+        <div class="writing-icon">&#128260;</div>
+        <div class="writing-title">How to Move a Model from One Django App to Another</div>
+        <p class="writing-desc">A guide to safely moving Django models between applications while preserving database relationships and migrations.</p>
+        <div class="writing-tags">
+          <span class="writing-tag">Django</span>
+          <span class="writing-tag">Database</span>
+          <span class="writing-tag">Migrations</span>
+        </div>
+        <div class="writing-links">
+          <a href="https://medium.com/@shweta17/how-to-move-a-model-from-one-django-app-to-another-743184d6a5b2" target="_blank" rel="noopener">Read on Medium &rarr;</a>
         </div>
       </div>
 
