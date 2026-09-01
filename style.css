@@ -313,9 +313,9 @@ nav {
 /* Stats */
 .hero-stats {
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
   flex-wrap: nowrap;
-  white-space: nowrap;
+  align-items: flex-start;
 }
 
 .stat-item { text-align: left; }
